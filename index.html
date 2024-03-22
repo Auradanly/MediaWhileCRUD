@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <span>Cadastro de Notas</span>
+      <button onclick="openModal()" id="new">Incluir</i></button>
+    </div>
+
+    <div class="divTable">
+      <table>
+        <thead>
+          <tr>
+            <th>Nota1</th>
+            <th>Nota2</th>
+            <th>Média</th>
+            <th class="acao">Editar</th>
+            <th class="acao">Excluir</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="modal-container">
+      <div class="modal">
+          <form action="calculo.php" method="post">
+  <div class="formulario">
+    1ª Nota: <input type="text" name="nota1" id="m-nota1" placeholder="Digite a 1ª Nota "> <br><br>
+    2ª Nota: <input type="text" name="nota2" id="m-nota2" placeholder="Digite a 2ª Nota "> <br><br>
+    Numero de Alunos: <input type="text" name="nalunos" id="m-nalunos" placeholder="Digite o numero de alunos da turma "> <br><br>
+    <input type="submit" value="Calcular" id="btnSalvar" name="mediaTurma">
+  </div>
+</form>
+
+      </div>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
